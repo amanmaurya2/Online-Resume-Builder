@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resume-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contact-phone">Phone:</label>
+                <input type="tel" id="contact-phone" name="contact-phone" required>
+                <br/><br/>                
+                <label for="experience">Work Experience:</label>
+                <textarea id="experience" name="experience" rows="5" required></textarea>
+
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" rows="5" required></textarea>
+
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" rows="5" required></textarea>
+
+        <section id="projects">
+            <h2>Projects</h2>
+                <label for="project-title">Project Title:</label>
+                <input type="text" id="project-title" name="project-title">
+                <br/>
+                <label for="project-description">Project Description:</label>
+                <textarea id="project-description" name="project-description" rows="3"></textarea>
+
+                <label for="project-github">Project Link:</label>
+                <input type="url" id="project-github" name="project-github" placeholder="https://project.com" pattern="https://.*" >
+
+                <button type="button" id="add-project">Add Project</button>
+                <div id="project-list"></div>
+        </section>
+
+        <section id="contact">
+            <h2>Social Networks</h2>    
+                <label for="contact-linkedin">LinkedIn Profile:</label>
+                <input type="text" id="contact-linkedin" name="contact-linkedin" placeholder="UserName" >
+
+                <label for="contact-github">GitHub Profile:</label>
+                <input type="text" id="contact-github" name="contact-github" placeholder="UserName" >
+        </section>
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resume-section">
+            <h2>Your Resume</h2>
+                <div id="resume-output"></div>
+                <button id="download-pdf">Download Resume</button>
+        </section>
+
+    </main>
+    <footer style="font-family: 'Courier New', Courier, monospace; font-weight: 600; text-align: center;">
+        <hr/>
+        <p>Created by Aman Maurya</p>
+    </footer>
+    
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
